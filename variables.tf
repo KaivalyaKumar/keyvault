@@ -21,3 +21,27 @@ variable "keyvar" {
     })
     nullable = false
 }
+
+variable "name" {
+    type = string
+nullable = false
+description = "Specifies the name of the resource."
+}
+
+variable "rg_name" {
+    type = string
+nullable = false
+description = "The name of the resource group in which to create the Key Vault."
+}
+
+variable "tags" {
+    type = map(string)
+nullable = false
+description = "Associated tags."
+}
+
+variable "location" {
+    type = string
+nullable = false
+description = "Location."
+}
