@@ -2,6 +2,8 @@ variable "keyvar" {
     type = object({
         name = string
         rg_name = string
+        tags = optional(string,"trinket")
+        location = string
         size = optional(list(string),["xyz","23"])
         dimensions = object({
             len = optional(number,65/7)
