@@ -8,6 +8,7 @@ variable "keyvar" {
         dimensions = object({
             len = optional(number,65/7)
             bred = string
+            location = string
             dims = map(object({
                 leng = optional(string,"247")
                 breadth = optional(list(string),["24*7"])
