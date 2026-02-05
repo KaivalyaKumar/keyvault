@@ -49,3 +49,13 @@ variable "location" {
 nullable = false
 description = "Location."
 }
+
+variable "configs" {
+    type = map(any)
+    description = "configs data"
+    default = {
+        "max_conn" : "100",
+        "allowed" : "0",
+        "order" : "top"
+    }
+}
