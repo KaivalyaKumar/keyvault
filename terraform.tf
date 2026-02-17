@@ -8,6 +8,10 @@ terraform {
       source = "localterraform.com/SSC/azapi"
       version = ">= 2.4.0"
     }
+    azurerm = {
+      source = "localterraform.com/SSC/azurerm"
+      version = ">= 2.4.0"
+    }
   }
   required_version = ">= 1.8.0"
 }
