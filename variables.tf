@@ -12,6 +12,7 @@ variable "keyvar" {
             dims = map(object({
                 leng = optional(string,"247")
                 time = optional(string,"2.47.9")
+                zonal = optional(string,"app/json-prod/aws")
                 breadth = optional(list(string),["247abc0","237","1.8.7.7"])
                 height = optional(list(string),["app/json-prod/azp"])
             }))
