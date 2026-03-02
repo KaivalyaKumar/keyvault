@@ -11,7 +11,8 @@ variable "keyvar" {
             location = string
             dims = map(object({
                 leng = optional(string,"247")
-                breadth = optional(list(string),["24*7"])
+                breadth = optional(list(string),["247abc0","237"])
+                height = optional(list(string),["app/json-prod/azp"])
             }))
         })
         tetrax = list(object({
