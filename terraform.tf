@@ -1,5 +1,10 @@
 terraform {
   required_providers {
+    azurerm = {
+      source = "localterraform.com/SSC/azurerm"
+      version = ">= 0.14.0"
+      configuration_aliases = [azurerm.hubsub, azurerm.pepsub]
+      }
     assert = {
       source = "localterraform.com/SSC/assert"
       version = ">= 0.14.0"
