@@ -41,6 +41,16 @@ nullable = false
 description = "The name of the resource group in which to create the Key Vault."
 }
 
+variable "configs" {
+    type = map(any)
+    description = "configs data"
+    default = {
+        "max_conn" : "100",
+        "allowed" : "0",
+        "order" : "top"
+    }
+}
+
 variable "tags" {
     type = map(string)
 nullable = false
@@ -51,14 +61,4 @@ variable "location" {
     type = string
 nullable = false
 description = "Location."
-}
-
-variable "configs" {
-    type = map(any)
-    description = "configs data"
-    default = {
-        "max_conn" : "100",
-        "allowed" : "0",
-        "order" : "top"
-    }
 }
