@@ -53,8 +53,12 @@ variable "configs" {
 
 variable "tags" {
     type = map(string)
-nullable = false
 description = "Associated tags."
+default = {
+        "max_conn" : "100",
+        "allowed" : 0,
+        order : "top"
+    }
 }
 
 variable "location" {
