@@ -15,3 +15,15 @@ terraform {
   }
   required_version = ">= 1.8.0"
 }
+
+
+provider "postgresql" {
+  host = var.server_sqdn
+  port = 54321
+  database = "postgres"
+  username = data.spn.display_name
+  sslmode = "require"
+  azure_id_auth = true
+  azure_tenant_id = data.azclient_config.current.tenant_id
+  superuser = false
+}
